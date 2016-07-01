@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validator</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="hero">
+  <img class="jar" src="images/jar.png">
+  <div class="row text-center">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <h1 id="fittext1" class="head">Marketing</h1>
+      <h1 id="fittext2" class="head">Buzzword</h1>
+      <h1 id="fittext3" class="head">Jar</h1>
+    </div>
+    <div class="col-xs-4">
+    </div>
+  </div>
+  <p class="text-center">Like a swear jar, but for...</p>
+</div>
+
+<div id="detail">
+  <p>Buy now and get over +200 TED</p>
+  <p class="small">Probably made in Singapore. Assembled in America</p>
+</div>
+
+<div id="testimonial">
+  <h1 class="text-center">Perfect for</h1>
+  <div class="row">
+    <div class="testi col-sm-4">
+      <p>Duis bibendum nibh mi, quis auctor lacus fringilla ut. Duis fringilla, tortor vitae tempor dignissim, sapien nunc interdum turpis, at volutpat nunc quam vitae eros.</p>
+    </div>
+    <div class="testi col-sm-4">
+      <p>Quisque gravida quam nec massa finibus ornare. Ut molestie enim vel elit lobortis, sit amet lobortis nisi efficitur. Mauris et magna ac justo pulvinar malesuada.</p>
+    </div>
+    <div class="testi col-sm-4">
+      <p>Curabitur quis leo at leo tincidunt dignissim. Duis dignissim pellentesque iaculis. Morbi finibus rhoncus nisl eleifend sollicitudin.</p>
+    </div>
+  </div>
+</div>
+
+<div id="whiteboard">
+</div>
+
+<div id="validator">
+  <div class="row val-form">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Is it a buzzword?</h1>
+        <form id="myform" onsubmit="validate()">
+          <input id="buzzword" name="buzzword">
+          <input type="submit">
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script type="text/javascript">
+  $("#fittext1").fitText(.42);
+  $("#fittext2").fitText(.47);
+  $("#fittext3").fitText(.57);
+</script>
+<script type="text/javascript">
+    function validate() {
+        var arr = ["advertainment", "big data", "clickbait", "disruptor", "freemium",
+      "gamification", "growth hack", "hyperlocal", "ideation", "innovator", "millenial", "netiquette", "omnichannel", "real-time", "snackable", "storyscaping", "solomo", "transparency", "viral", "wantrapreneur", "wearable"];
+        var input = document.getElementById('myform').elements.item(0).value;
+        if (arr.indexOf(input) == -1 ) {
+            window.alert("Sorry, that wasn't a buzzword. Try again.");
+        } else {
+            window.alert("Yay, that was a buzzword. You rock.")
+        }
+    }
+</script>
+
+</body>
+</html>

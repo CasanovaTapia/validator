@@ -1,0 +1,28 @@
+body {
+  background-color: #eee;
+  font-family: "Helvetica";
+  font-weight: bold;
+
+  h1, .h1 {
+    display: block;
+    text-transform: uppercase !important;
+    font-weight: bolder !important;
+    letter-spacing: 2px !important;
+  }
+}
+
+
+
+#hero {
+  img {
+    display: absolute;
+    bottom: 5vh;
+    left: 5vh;
+  }
+}
+
+#validator {
+  form {
+    color: #222;
+  }
+}
